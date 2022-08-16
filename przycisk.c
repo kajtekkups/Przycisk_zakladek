@@ -25,10 +25,19 @@ int main(void){
 
         if((PINB & (1 << PB0)) != (1 << PB0)){
             PORTB |= (1 << PB3);
+            USART_Transmit(1);
+            while((PINB & (1 << PB0)) != (1 << PB0));
+        }
+        else if((PINB & (1 << PB1)) != (1 << PB1)){
             USART_Transmit(2);
             _delay_ms(100);
-        }else if((PINB & (1 << PB1)) != (1 << PB1)){
             PORTB &= ~(1 << PB3);
+            while((PINB & (1 << PB1)) != (1 << PB1));
+        }
+        else if((PINB & (1 << PB2)) != (1 << PB2)){
+            USART_Transmit(3);
+            _delay_ms(100);
+            while((PINB & (1 << PB2)) != (1 << PB2));
         }
     }
     return (0);
