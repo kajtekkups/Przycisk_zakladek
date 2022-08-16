@@ -14,10 +14,10 @@ MAIN = przycisk.c
 
 ## If you've split your program into multiple .c / .h files, 
 ## include the additional source (in same directory) here 
-LOCAL_SOURCE = 
+LOCAL_SOURCE = USART.c USART.h
 
 ## Here you can link to one more directory (and multiple .c files)
-EXTRA_SOURCE_DIR = ./Programowanie_AVR_library/
+EXTRA_SOURCE_DIR = /USART/
 EXTRA_SOURCE_FILES = 
 
 ##########------------------------------------------------------##########
