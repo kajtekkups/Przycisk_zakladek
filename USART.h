@@ -2,7 +2,7 @@
 
 
 
-//ubrr explained in datasheet pasge 182
+//ubrr explained in datasheet page 182
 void USART_Init(unsigned int ubrr); //setting USART on
 
 
