@@ -25,5 +25,3 @@ while(True):
 
     link = choose_the_link(transfer_data[0])
     webbrowser.open(link)
-
-    print("code: ", transfer_data[0])
