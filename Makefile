@@ -17,7 +17,7 @@ MAIN = przycisk.c
 LOCAL_SOURCE = USART.c USART.h
 
 ## Here you can link to one more directory (and multiple .c files)
-EXTRA_SOURCE_DIR = /USART/
+EXTRA_SOURCE_DIR = ./USART/
 EXTRA_SOURCE_FILES = 
 
 ##########------------------------------------------------------##########
@@ -28,7 +28,7 @@ EXTRA_SOURCE_FILES =
 
 PROGRAMMER_TYPE = avrisp
 # extra arguments to avrdude: baud rate, chip type, -F flag, etc.
-PROGRAMMER_ARGS = -P com3 -b 19200
+PROGRAMMER_ARGS = -P com4 -b 19200
 
 ##########------------------------------------------------------##########
 ##########                   Makefile Magic!                    ##########
