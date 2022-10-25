@@ -5,10 +5,11 @@
 #include <util/delay.h>
 #include "USART.h"
 
-// #define FOSC 1843200 // Clock Speed
-#define FOSC 1000000 // Clock Speed
-#define BAUD 9600
-#define MY_UBRR FOSC/16/BAUD-1 //explained in datasheet pasge 182
+
+// Clock Speed (FOSC) 1000000 
+// BAUD 9600
+#define MY_UBRR 6 // (FOSC/(16*BAUD))-1 explained in datasheet pasge 182
+
 
 int main(void){
 
@@ -27,20 +28,20 @@ int main(void){
             
             PORTB |= (1 << PB3);
             USART_Transmit(1);
-
+            USART_Transmit(10);
             while((PINB & (1 << PB0)) != (1 << PB0));
         }
         else if((PINB & (1 << PB1)) != (1 << PB1)){
             
             PORTB &= ~(1 << PB3);
             USART_Transmit(2);
-            
+            USART_Transmit(10);
             while((PINB & (1 << PB1)) != (1 << PB1));
         }
         else if((PINB & (1 << PB2)) != (1 << PB2)){
            
             USART_Transmit(3);
-           
+           USART_Transmit(10);
             while((PINB & (1 << PB2)) != (1 << PB2));
         }
     }
