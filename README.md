@@ -7,5 +7,6 @@ When button is pushed, computer opens previously saved web pages set. Diffrent b
 
 
 TODO:
--dodac interfejs
--stworzyc plik wykonywalny
+dodac interfejs
+stworzyc plik wykonywalny
+Zapobieganie odbiciom przycisku 
